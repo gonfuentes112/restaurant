@@ -1,8 +1,22 @@
 import "./style.css";
+import { loadHome } from "./home";
 
-const content = document.getElementById('content');
+(() => {
+    const navBar = document.getElementById('nav-bar');
+    const content = document.getElementById('content');
+    
+    function updateContent(event) {
+        const target = event.target;
+        if (!target.classList.contains("nav-button")) {
+            return;
+        }
+        if (target.id === 'home-button') {
+            loadHome();
+        }
 
-import Img from "./img/shop.jpg";
-const shopImg = document.createElement('img');
-shopImg.src = Img;
-content.appendChild(shopImg);
+    }
+
+    navBar.addEventListener('click', updateContent);
+
+    loadHome();
+})();
