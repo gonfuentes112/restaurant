@@ -1,5 +1,6 @@
 import "./style.css";
 import { loadHome } from "./home";
+import { loadMenu } from "./menu";
 
 (() => {
     const navBar = document.getElementById('nav-bar');
@@ -12,6 +13,9 @@ import { loadHome } from "./home";
         }
         if (target.id === 'home-button') {
             loadHome();
+        }
+        if (target.id === 'menu-button') {
+            loadMenu();
         }
 
     }
