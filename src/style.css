@@ -43,6 +43,7 @@ button {
     font-weight: bold;
     box-shadow: none;
     outline: none;
+    font-size: 3rem;
 }
 
 #content {
